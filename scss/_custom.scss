@@ -4,7 +4,7 @@
 // Include any default variable overrides here (though functions won't be available)
 
 $primary: rgba(139, 100, 45, 1);
-$secondary: rgba(180, 171, 153, 0.3);
+$secondary: rgb(236, 230, 216);
 $dark: rgba(56, 44, 32, 1);
 $black: rgba(40, 34, 34, 1);
 $font-family-sans-serif: "Montserrat", sans-serif !default;
@@ -13,3 +13,31 @@ $font-family-serif: "Hind Madurai", serif !default;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Then add additional custom code here
+
+.font-lg{
+    font-size: 1.25rem;
+}
+
+.font-sm{
+    font-size: 1rem;
+}
+.navbar {
+    --bs-navbar-brand-font-size: 1.5rem;
+    .nav-link {
+        text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }}
+}
+
+@media (min-width: 992px) {
+    .font-lg{
+        font-size: 1.5rem;
+    }
+    .font-sm{
+        font-size: 1.25rem;
+    }
+    .navbar {
+        --bs-navbar-brand-font-size: 2rem;
+    }
+}
