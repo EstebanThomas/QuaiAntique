@@ -11993,6 +11993,68 @@ textarea.form-control-lg {
   text-decoration: underline;
 }
 
+.text-home {
+  white-space: nowrap;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  font-size: 1rem;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.img-home1 {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 25%;
+     object-position: 50% 25%;
+}
+
+.img-home2 {
+  width: 100%;
+  height: 75px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+}
+
+.img-home3 {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 55%;
+     object-position: 50% 55%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 1;
+  padding-right: 1;
+  color: white;
+  font-family: "Hind Madurai", serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+}
+
 @media (min-width: 992px) {
   .font-lg {
     font-size: 1.5rem;
@@ -12002,5 +12064,20 @@ textarea.form-control-lg {
   }
   .navbar {
     --bs-navbar-brand-font-size: 2rem;
+  }
+  .img-home1 {
+    height: 300px;
+  }
+  .img-home2 {
+    height: 155px;
+  }
+  .img-home3 {
+    height: 350px;
+  }
+  .text-home {
+    font-size: 1.5rem;
+  }
+  .btn-primary {
+    font-size: 1.5rem;
   }
 }/*# sourceMappingURL=main.css.map */

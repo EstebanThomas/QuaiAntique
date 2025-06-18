@@ -9,17 +9,19 @@ $dark: rgba(56, 44, 32, 1);
 $black: rgba(40, 34, 34, 1);
 $font-family-sans-serif: "Montserrat", sans-serif !default;
 $font-family-serif: "Hind Madurai", serif !default;
+$font-lg: 1.25rem;
+$font-sm: 1rem;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Then add additional custom code here
 
 .font-lg{
-    font-size: 1.25rem;
+    font-size: $font-lg;
 }
 
 .font-sm{
-    font-size: 1rem;
+    font-size: $font-sm;
 }
 .navbar {
     --bs-navbar-brand-font-size: 1.5rem;
@@ -28,6 +30,61 @@ $font-family-serif: "Hind Madurai", serif !default;
     &:hover {
         text-decoration: underline;
     }}
+}
+
+.text-home{
+    white-space: nowrap;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    font-size: $font-sm;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.img-home1 {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: 50% 25%;
+}
+
+.img-home2 {
+    width: 100%;
+    height: 75px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.img-home3 {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: 50% 55%;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+.text-shadow{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1;
+    padding-right: 1;
+    color: white;
+    font-family: $font-family-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: $font-sm;
 }
 
 @media (min-width: 992px) {
@@ -39,5 +96,23 @@ $font-family-serif: "Hind Madurai", serif !default;
     }
     .navbar {
         --bs-navbar-brand-font-size: 2rem;
+    }
+    .img-home1 {
+        height: 300px;
+
+    }
+    .img-home2 {
+        height: 155px;
+
+    }
+    .img-home3 {
+        height: 350px;
+
+    }
+    .text-home{
+        font-size: 1.5rem;
+    }
+    .btn-primary{
+    font-size: 1.5rem;
     }
 }
