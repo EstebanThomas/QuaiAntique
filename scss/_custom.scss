@@ -87,6 +87,17 @@ $font-sm: 1rem;
     font-size: $font-sm;
 }
 
+.btn-danger{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1;
+    padding-right: 1;
+    color: white;
+    font-family: $font-family-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: $font-sm;
+}
+
 .img-galerie{
     width: 90%;
     height: 175px;
@@ -100,13 +111,30 @@ $font-sm: 1rem;
 }
 
 .image-card{
-    img{
+    position: relative;
+    img, .action-img-btn{
         transition: all 0.5s;
     }
     &:hover{
         img{
             filter: brightness(0.3);
         }
+        .action-img-btn{
+            opacity: 1;
+        }
+    }
+    .action-img-btn{
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 3%;
+        opacity: 0;
     }
 }
 
@@ -143,6 +171,11 @@ html, body {
     margin: 0;
 }
 
+input::placeholder{
+    font-family: $font-family-serif !important;
+    font-size: $font-sm !important;
+}
+
 @media (min-width: 992px) {
     .font-lg{
         font-size: 1.5rem;
@@ -168,7 +201,7 @@ html, body {
     .text-home{
         font-size: 1.5rem;
     }
-    .btn-primary{
+    .btn-primary, .btn-danger{
         font-size: 1.5rem;
     }
     .img-galerie{
