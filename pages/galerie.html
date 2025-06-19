@@ -1,12 +1,13 @@
 <div class="d-flex justify-content-center align-items-center mt-2 mb-1">
-    <button class="btn btn-primary">Ajouter une image</button>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalEdit">Ajouter une image</button>
 </div>
 <div class="row">
     <div class="col-12 col-lg-6 image-card">
         <img src="../elements/Plat1.jpg" class="img-fluid img-galerie" alt="Image du plat numéro 1">
+        <h1 class="image-title">Titre</h1>
         <div class="action-img-btn">
-            <button class="btn btn-outline-light"><i class="bi bi-pencil"></i></button>
-            <button class="btn btn-outline-light"><i class="bi bi-trash"></i></button>
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ModalEdit"><i class="bi bi-pencil"></i></button>
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#ModalDelete"><i class="bi bi-trash"></i></button>
         </div>
     </div>
     <div class="col-12 col-lg-6 image-card">
@@ -24,4 +25,49 @@
 </div>
 <div class="d-flex justify-content-center align-items-center mb-2">
     <button class="btn btn-primary">Réserver</button>
+</div>
+
+
+<!--Modal Edit-->
+<div class="modal" tabindex="-1" id="ModalEdit">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">EDITION D'UNE PHOTO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                    <form>
+                        <div class="mb-2">
+                            <label for="img-title" class="form-label">Titre</label>
+                            <input type="text" class="form-control" id="img-title">
+                        </div>
+                        <div>
+                            <label for="img-input" class="form-label">Image</label>
+                            <input type="file" class="form-control" id="img-input">
+                        </div>
+                        <button type="submit" class="btn btn-primary d-block mx-auto mt-5">ENREGISTRER</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal Delete-->
+<div class="modal" tabindex="-1" id="ModalDelete">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Êtes-vous sûr de vouloir supprimer cette photo ?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                        <div>
+                            <p class="text-center font-sm">Titre</p>
+                            <img src="../elements/Plat1.jpg" class="img-fluid img-galerie" alt="Image du plat numéro 1"/>
+                        </div>
+                <button class="btn btn-danger d-block mx-auto mt-5">SUPPRIMER</button>
+            </div>
+        </div>
+    </div>
 </div>
