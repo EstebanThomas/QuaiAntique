@@ -190,6 +190,18 @@ input::placeholder{
     text-align: center;
 }
 
+.allreservations{
+    a{
+        display: block;
+        color: $black;
+        padding:10px;
+    }
+    :hover{
+        color: $primary;
+        transition-duration: 0.3s;
+    }
+}
+
 @media (min-width: 992px) {
     .font-lg{
         font-size: 1.5rem;
