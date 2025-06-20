@@ -6,10 +6,20 @@
         <div class="mb-2">
             <label for="prenom" class="form-label">Prénom</label>
             <input type="string" class="form-control" id="prenom">
+            <div class="invalid-feedback text-center">
+                <p>
+                    Le prénom est obligatoire.
+                </p>
+            </div>
         </div>
         <div class="mb-2">
             <label for="nom" class="form-label">Nom</label>
             <input type="string" class="form-control" id="nom">
+            <div class="invalid-feedback text-center">
+                <p>
+                    Le nom est obligatoire.
+                </p>
+            </div>
         </div>
         <div class="mb-2">
             <label for="nombreConvives" class="form-label">Nombre de convives par défaut</label>
@@ -22,14 +32,30 @@
         <div class="mb-2">
             <label for="email" class="form-label">Adresse email</label>
             <input type="email" class="form-control" id="email">
+            <div class="invalid-feedback text-center">
+                <p>
+                    L'adresse mail n'est pas au bon format.
+                </p>
+            </div>
         </div>
         <div>
             <label for="password" class="form-label">Mot de passe</label>
             <input type="password" class="form-control" id="password">
+            <div class="invalid-feedback text-center">
+                <p>
+                    Veuillez choisir un mot de passe avec au moins :<br>
+                    Une majuscule, une miniscule, un caractère spécial, un chiffre, 8 caractères.
+                </p>
+            </div>
         </div>
         <div>
             <label for="ValidatePassword" class="form-label">Confirmation du mot de passe</label>
             <input type="password" class="form-control" id="ValidatePassword">
+            <div class="invalid-feedback text-center">
+                <p>
+                    La confirmation n'est pas identique au mot de passe.
+                </p>
+            </div>
         </div>
         <button type="submit" class="btn btn-primary d-block mx-auto mt-5" id="btn-validation-inscription" disabled>INSCRIPTION</button>
     </form>
