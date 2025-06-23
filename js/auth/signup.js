@@ -5,6 +5,7 @@ const inputPassword = document.getElementById("password");
 const inputValidationPassword = document.getElementById("ValidatePassword");
 const btnValidation = document.getElementById("btn-validation-inscription");
 const formInscription = document.getElementById("formulaireInscription");
+const apiUrl = "http://127.0.0.1:8000/api/";
 
 inputNom.addEventListener("keyup", validateForm); 
 inputPreNom.addEventListener("keyup", validateForm);
@@ -113,8 +114,18 @@ function inscrireUtilisateur(){
         redirect: 'follow'
     };
 
-    fetch("http://127.0.0.1:8000/api/registration", requestOptions)
-    .then((response) => response.json())
-    .then((result) => console.log(result))
-    .catch((error) => console.log('error', error));
+    fetch(apiUrl+"registration", requestOptions)
+        .then(response => {
+            if(response.ok){
+                return response.json();
+            }
+            else{
+                alert("Erreur lors de l'inscription");
+            }
+        })
+        .then(result => {
+            alert("Bravo "+dataForm.get("prenom")+", vous êtes maintenant inscrit, vous pouvez vous connecter.");
+            document.location.href="/Connexion";
+        })
+        .catch(error => console.log('error', error));
 }
