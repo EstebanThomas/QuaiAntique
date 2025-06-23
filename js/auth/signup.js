@@ -123,6 +123,7 @@ function inscrireUtilisateur(){
                 alert("Erreur lors de l'inscription");
             }
         })
+        // eslint-disable-next-line no-unused-vars
         .then(result => {
             alert("Bravo "+dataForm.get("prenom")+", vous êtes maintenant inscrit, vous pouvez vous connecter.");
             document.location.href="/Connexion";
