@@ -36,9 +36,11 @@ function checkCredentials(){
     })
     .then(result => {
         const token = result.apiToken;
+        // eslint-disable-next-line no-undef
         setToken(token);
         //placer ce token en cookie
 
+        // eslint-disable-next-line no-undef
         setCookie(RoleCookieName, result.roles[0], 7);
         window.location.replace("/");
     })
